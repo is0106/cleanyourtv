@@ -2,5 +2,5 @@
   "tv": "Epson LS800 laser projector (Askey HA90 module, sti6202d101, Amlogic)",
   "os": "Android TV 14",
   "brand": "Epson",
-  "notes": "First Epson list: Google feedback, ad services, partner auto-installs, print spooler, Play Games, Instagram, Pluto TV, Epson Online Meetings; Epson projector-control packages kept, `com.epson.logcollection` kept (it owns Projector Settings > Information; turn the operation log off there); TV Recommendations is re-enabled by `com.droidlogic`; YouTube button hard-coded to YouTube Music, Apps button dead without tvlauncher; Wireless debugging only; config.json dock; reboot-checked"
+  "notes": "First Epson list: Google feedback, ad services, partner auto-installs, print spooler, Play Games, Instagram, Pluto TV, Epson Online Meetings, Amlogic Updater (`com.droidlogic.updater`); all Epson projector-control packages kept (`com.epson`, `com.epson.bizmodeui`, `com.epson.setupcustomizer`, `com.epson.logcollection`) so `vendor.epson.hardware.maimif@1.0-service` hardware remote keys (Brightness, Projector Settings, Blank Screen) work; TV Recommendations is re-enabled by `com.droidlogic`; YouTube button hard-coded to YouTube Music, Apps (`ALL_APPS`) button consumed by Android 14 before accessibility services when stock `tvlauncher` is disabled; 6-column Apple TV dock layout & Cosy Home TV frosted-glass theme documented"
 }

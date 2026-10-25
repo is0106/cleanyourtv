@@ -1,15 +1,18 @@
 {
   "dock_apps": [
-    "com.plexapp.android",
+    "com.netflix.ninja",
     "com.google.android.youtube.tv",
-    "com.crunchyroll.crunchyroid",
-    "com.ionitech.airscreen"
+    "com.spotify.tv.android",
+    "com.chocolabs.app.chocotv.tv",
+    "com.pts.ptsplus",
+    "com.epson.droidsettings",
+    "com.android.vending"
   ],
   "hidden_apps": [
     "com.droidlogic.android.tv",
     "com.droidlogic.updater"
   ],
   "live_tv_package": "",
-  "columns": 4,
+  "columns": 6,
   "rows_below_dock": 0
 }

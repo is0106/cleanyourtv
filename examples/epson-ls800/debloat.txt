@@ -10,15 +10,19 @@
 # Google TV's launcherx). HOME claimants on stock: tvlauncher and com.android.tv.settings/.system.FallbackHome.
 #
 # KEEP, the Android side drives the projector itself:
-# - com.epson: projector control (auto focus, auto keystone, cinema/picture modes, Bluetooth speaker mode).
+# - com.epson: projector control (auto focus, auto keystone, cinema/picture modes, Bluetooth speaker mode)
+#   and MaimIfKeyListenerClient -> KeyHandlerC for vendor.epson.hardware.maimif@1.0-service (hardware
+#   Brightness, Projector Settings, and Blank/Screen Off keys over internal USB interface).
 # - com.epson.droidsettings (projector menu), com.epson.flexiblepicture, com.epson.installation,
-#   com.epson.visualization, com.epson.warningui (lamp/temperature warnings), com.epson.bizmodeui.
+#   com.epson.visualization, com.epson.warningui (lamp/temperature warnings), com.epson.bizmodeui,
+#   com.epson.setupcustomizer. Disabling these breaks the maimif key listener until re-enabled + rebooted.
 # - com.epson.logcollection: it collects operation logs, but it also owns the Information screen
 #   (com.epson.intent.action.INFORMATION). Disabled, Projector Settings > Information crashes Projector
 #   Settings with ActivityNotFoundException. Opt out of operation logs on that screen instead.
 # - com.droidlogic.tv.extras: input-source screen (com.android.tv.action.VIEW_INPUTS) and sleep timer.
 # - com.droidlogic.tvinput, com.droidlogic.android.tv, com.droidlogic.tv.settings: HDMI inputs and settings.
-# - Firmware updates kept by choice: com.epson.fwupdate, com.droidlogic.updater, com.askey.autousbota.
+# - Firmware updates: com.epson.fwupdate, com.askey.autousbota kept; com.droidlogic.updater disabled below
+#   to remove the Updater app tile from the launcher grid.
 #
 # Notes from this unit (verified with screenshots, 21 October 2026):
 # - Only Wireless debugging (TLS) is offered; pair once with `adb pair`, then `adb tcpip 5555`. Port 5555
@@ -55,3 +59,4 @@ com.google.android.play.games
 com.instagram.airwave
 tv.pluto.android
 com.epson.onlinemeetings               # Epson Online Meetings (video conferencing), owner does not use it
+com.droidlogic.updater                 # Amlogic local OTA Updater app tile in launcher grid
